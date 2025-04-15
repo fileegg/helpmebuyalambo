@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Help Me Buy a Lambo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.3em;
+      max-width: 600px;
+      margin: 0 auto 1.5em;
+    }
+    .donate-button {
+      margin: 2em auto;
+    }
+    .crypto {
+      margin-top: 3em;
+      font-size: 1em;
+      word-break: break-word;
+    }
+    .progress-container {
+      margin-top: 3em;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #333;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 30px;
+      background-color: limegreen;
+      width: 2%; /* mock progress */
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      line-height: 30px;
+      transition: width 0.5s;
+    }
+    iframe {
+      margin-top: 3em;
+      border-radius: 10px;
+    }
+    .footer {
+      margin-top: 5em;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Help Me Buy a Lambo 🏎️</h1>
+  <p>If you’ve ever wanted to say “I helped a stranger buy a Lamborghini,” here’s your chance. No promises, just vibes.</p>
+
+  <div class="donate-button">
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="hosted_button_id" value="KDEQSUSRD4R34" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Donate with PayPal" />
+      <img alt="" border="0" src="https://www.paypal.com/en_AT/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  </div>
+
+  <div class="crypto">
+    <h2>Prefer Crypto?</h2>
+    <p>BTC: <code>1Lamb0DreamxXx1234567890ABCDEF</code></p>
+    <p>ETH: <code>0xHelpMeLambo123456789ABCDEF</code></p>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar">2% funded</div>
+  </div>
+
+  <p style="margin-top: 0.5em; font-style: italic;">Goal: $200,000 for a shiny yellow Lambo 🤯</p>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jY9iH2mc9_8?start=5&autoplay=1&mute=1&loop=1&playlist=jY9iH2mc9_8" title="This could be me..." frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <div class="footer">
+    <p>💬 Not a charity. Just a dreamer on the internet. All donations go to the Lambo (or tacos if dreams fail).</p>
+  </div>
+
+  <script>
+    const goal = 200000;
+    const raised = 4200; // You can manually change this if you want
+
+    const percent = Math.min(100, (raised / goal * 100).toFixed(1));
+    const progressBar = document.getElementById("progress-bar");
+    progressBar.style.width = percent + "%";
+    progressBar.textContent = `${percent}% funded`;
+  </script>
+</body>
+</html>
